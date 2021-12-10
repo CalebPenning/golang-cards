@@ -6,11 +6,17 @@ import (
 )
 
 func main() {
-	cards := []string{"Ace of Diamonds", newCard()}
+	cards := deck{"Ace of Diamonds", newCard()}
 
+	// classic explicitly declared loop
 	for i := 0; i < len(cards); i++ {
 		fmt.Println(cards[i])
 	}
+
+	// // alternate syntax
+	// for i, card := range cards {
+	// 	fmt.Println(i, card)
+	// }
 }
 
 func newCard() string {
@@ -21,4 +27,3 @@ func newCard() string {
 
 // slices behave more like js arrays,
 // can grow or shrink
-
