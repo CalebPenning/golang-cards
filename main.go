@@ -5,13 +5,7 @@ import (
 )
 
 func main() {
-	fmt.Println("Starting new card program...")
 	cards := newDeck()
-	cards.print()
-	fmt.Println("Done!")
+
+	fmt.Println(cards.toString())
 }
-
-// in go, arrays have a fixed size
-
-// slices behave more like js arrays,
-// can grow or shrink
