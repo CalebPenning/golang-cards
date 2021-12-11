@@ -5,7 +5,8 @@ import (
 )
 
 func main() {
+	fmt.Println("Starting...")
 	cards := newDeck()
-
-	fmt.Println(cards.toString())
+	cards.saveToFile("my_cards")
+	fmt.Println("Finished saving file")
 }

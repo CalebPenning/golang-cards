@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"strings"
+	"os"
 )
 
 // create a new type "deck"
@@ -41,5 +42,9 @@ func deal(d deck, handSize int) (deck, deck) {
 }
 
 func (d deck) toString() string {
-	return strings.Join([]string(d), ", ")
+	return strings.Join([]string(d), ",")
+}
+
+func (d deck) saveToFile(filename string) error {
+	return os.WriteFile(filename, []byte(d.toString()), 0666)
 }
